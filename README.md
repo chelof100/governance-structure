@@ -2,8 +2,7 @@
 
 **Fair Allocation, Strategy-Proofness, and Multi-Scale Composition**
 
-[![DOI-P3](https://img.shields.io/badge/DOI%20(P3)-10.5281%2Fzenodo.19672597-blue)](https://doi.org/10.5281/zenodo.19672597)
-[![DOI-P4](https://img.shields.io/badge/DOI%20(P4)-10.5281%2Fzenodo.19672608-blue)](https://doi.org/10.5281/zenodo.19672608)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19708496-blue)](https://doi.org/10.5281/zenodo.19708496)
 [![arXiv](https://img.shields.io/badge/arXiv-TBD-red)](https://agentcontrolprotocol.xyz)
 [![Series](https://img.shields.io/badge/Series-Agent%20Governance-green)](https://agentcontrolprotocol.xyz)
 
@@ -30,7 +29,7 @@ We validate these results through a series of analytical constructions and empir
 | P0 | Atomic Decision Boundaries | [10.5281/zenodo.19670649](https://doi.org/10.5281/zenodo.19670649) | [2604.17511](https://arxiv.org/abs/2604.17511) |
 | P1 | Agent Control Protocol (ACP) | [10.5281/zenodo.19672575](https://doi.org/10.5281/zenodo.19672575) | [2603.18829](https://arxiv.org/abs/2603.18829) |
 | P2 | From Admission to Invariants (IML) | [10.5281/zenodo.19672589](https://doi.org/10.5281/zenodo.19672589) | [2604.17517](https://arxiv.org/abs/2604.17517) |
-| **P3/4** | **Irreducible Governance Structure** (this paper) | [10.5281/zenodo.19672597](https://doi.org/10.5281/zenodo.19672597) + [10.5281/zenodo.19672608](https://doi.org/10.5281/zenodo.19672608) | TBD |
+| **P3/4** | **Irreducible Governance Structure** (this paper) | [10.5281/zenodo.19708496](https://doi.org/10.5281/zenodo.19708496) | TBD |
 | P5 | Reconstructive Authority Model (RAM) | [10.5281/zenodo.19669430](https://doi.org/10.5281/zenodo.19669430) | TBD |
 | P6 | Operationalizing Reconstructive Authority | [10.5281/zenodo.19699460](https://doi.org/10.5281/zenodo.19699460) | TBD |
 
@@ -93,11 +92,10 @@ pdflatex main.tex
   title        = {Irreducible Governance Structure for Autonomous Agent Systems:
                  Fair Allocation, Strategy-Proofness, and Multi-Scale Composition},
   year         = {2026},
-  doi          = {10.5281/zenodo.19672597},
-  howpublished = {\url{https://doi.org/10.5281/zenodo.19672597}},
-  note         = {Agent Governance Series, Paper~3/4 (consolidated).
-                  Zenodo DOI (P3): 10.5281/zenodo.19672597;
-                  Zenodo DOI (P4): 10.5281/zenodo.19672608}
+  doi          = {10.5281/zenodo.19708496},
+  howpublished = {\url{https://doi.org/10.5281/zenodo.19708496}},
+  note         = {Agent Governance Series, Paper~3/4 (consolidated). Zenodo.
+                  DOI: 10.5281/zenodo.19708496}
 }
 ```
 
