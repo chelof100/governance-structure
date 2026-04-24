@@ -74,6 +74,7 @@
 \newcommand{\Agents}{\mathcal{A}}
 \newcommand{\Actors}{\mathcal{U}}
 \newcommand{\Azero}{\mathcal{A}_0}
+\newcommand{\Azeroi}[1]{\mathcal{A}_{0,#1}}   % indexed admission snapshot \Azeroi{i}
 \newcommand{\Dhat}{\widehat{D}}
 \newcommand{\State}[1]{S_{#1}}
 \newcommand{\Trans}[1]{\delta_{#1}}
@@ -396,13 +397,13 @@ Under over-service (e.g., one actor controlling $m$ agents under M1 or M2), an o
 \begin{theorem}[Allocation Bias Induces IML Drift]
 \label{thm:bias-drift}
 Let $a_i \in \Agents$ be an agent calibrated under fair allocation ($B_i = 0$) with
-admission-time snapshot $\mathcal{A}_{0,i}$. Let $P_{\mathrm{excess}}$ be the distribution of
+admission-time snapshot $\Azeroi{i}$. Let $P_{\mathrm{excess}}$ be the distribution of
 actions drawn from states visited only due to excess allocation, with
-$\mathrm{JS}(P_{\mathrm{excess}} \| P_{\mathcal{A}_{0,i}}) \geq \eta > 0$. If $a_i$ is
+$\mathrm{JS}(P_{\mathrm{excess}} \| P_{\Azeroi{i}}) \geq \eta > 0$. If $a_i$ is
 persistently over-served with bias $B_i(t) \geq \delta > 0$ over a window of $T$ steps,
 then the IML deviation estimator satisfies
 \[
-  \widehat{D}(a_i,\,\mathcal{A}_{0,i}) \;\geq\; 0.40 \cdot f^2 \eta / 2 \;>\; 0,
+  \widehat{D}(a_i,\,\Azeroi{i}) \;\geq\; 0.40 \cdot f^2 \eta / 2 \;>\; 0,
 \]
 where $f = \delta/(1/N + \delta)$ is the fraction of actions attributable to excess
 allocation, even though $g(\tau_i) = 0$ (no individual action violates a local constraint).
@@ -412,7 +413,7 @@ allocation, even though $g(\tau_i) = 0$ (no individual action violates a local c
 By the IML deviation estimator $\Dhat_t = 0.40\,D_t + 0.35\,D_c + 0.25\,D_l$
 (Paper~2~\cite{fernandez2026c}), the tool-distribution component $D_t$ dominates.
 Under fraction $f$ of actions from $P_{\mathrm{excess}}$, the mixed empirical distribution
-is at Jensen--Shannon distance $\geq f^2 \eta / 2$ from $P_{\mathcal{A}_{0,i}}$. Since $f > 0$
+is at Jensen--Shannon distance $\geq f^2 \eta / 2$ from $P_{\Azeroi{i}}$. Since $f > 0$
 and $\eta > 0$ by assumption, $D_t > 0$ and hence $\Dhat > 0$. The enforcement
 projection $g(\tau_i)$ evaluates each action locally and cannot detect distributional
 skew, so $g(\tau_i) = 0$ throughout. \hfill $\blacksquare$
@@ -584,7 +585,7 @@ Without $\Layer{2}$, there is no behavioral monitoring layer. $\Layer{3}$ would 
 Without $\Layer{1}$, there is no stateful per-request enforcement. $\Layer{0}$ provides atomic evaluation of individual decisions, but without per-agent history, the system cannot prevent sequences of individually admissible requests that collectively violate global policies. Per-agent enforcement is required to achieve P1 across multi-request sessions.
 
 \textbf{Case 4: $\{\Layer{1}, \Layer{2}, \Layer{3}\}$ --- missing $\Layer{0}$.}
-Without $\Layer{0}$, the system has no structural guarantee that the evaluate-mutate boundary is enforced at hardware/OS level. $\Layer{1}$ refines $F$ under assumptions TA1 and TA2, which themselves require the atomic boundary from $\Layer{0}$. Under an adversary capable of exploiting the window between evaluation and mutation (TOCTOU), P1 can be violated. Hence the full atomicity guarantee is not achievable without $\Layer{0}$.
+Without $\Layer{0}$, the system has no structural guarantee that the evaluate-mutate boundary is enforced at hardware/OS level. $\Layer{1}$ refines $F$ under assumptions TA1 and TA2, which themselves require the atomic boundary from $\Layer{0}$. Under an adversary capable of exploiting the window between evaluation and mutation (Time-Of-Check-To-Time-Of-Use, TOCTOU), P1 can be violated. Hence the full atomicity guarantee is not achievable without $\Layer{0}$.
 
 \textbf{Conclusion.}
 All four three-layer subsets fail at least one guarantee. Any composition of fewer than four layers therefore also fails, or requires relaxing finite observability.
@@ -820,9 +821,8 @@ This work reframes agent governance from a problem of \emph{execution correctnes
 
 The answer is: allocation, enforcement, behavioral monitoring, and atomicity are four irreducible dimensions of the governance space. No system operating under finite observability can collapse them without introducing fundamental vulnerabilities. The four-layer architecture is not an over-engineered solution; it is the irreducible minimum.
 
-\begin{quote}
-\textit{Admission control determines what can happen. Fair allocation determines who gets to act. Correctness is local. Fairness is global. Both are necessary for governed autonomy.}
-\end{quote}
+\medskip
+\noindent\textit{Admission control determines what can happen. Fair allocation determines who gets to act. Correctness is local. Fairness is global. Neither, alone, suffices for governed autonomy.}
 
 % ===========================================================================
 \bibliographystyle{plainnat}
