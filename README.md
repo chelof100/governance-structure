@@ -62,10 +62,6 @@ This paper consolidates Papers 3 and 4 of the Agent Governance Series. The origi
 ```
 main.tex              — LaTeX source (19 pages, 6 theorems)
 references.bib        — Bibliography
-arxiv_submission/
-├── main.tex          — arXiv-ready source
-└── references.bib
-p34-governance-structure.zip  — arXiv submission ZIP
 README.md
 ```
 
