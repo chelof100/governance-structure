@@ -29,10 +29,13 @@ We validate these results through a series of analytical constructions and empir
 | P0 | Atomic Decision Boundaries | [10.5281/zenodo.19670649](https://doi.org/10.5281/zenodo.19670649) | [2604.17511](https://arxiv.org/abs/2604.17511) |
 | P1 | Agent Control Protocol (ACP) | [10.5281/zenodo.19672575](https://doi.org/10.5281/zenodo.19672575) | [2603.18829](https://arxiv.org/abs/2603.18829) |
 | P2 | From Admission to Invariants (IML) | [10.5281/zenodo.19672589](https://doi.org/10.5281/zenodo.19672589) | [2604.17517](https://arxiv.org/abs/2604.17517) |
-| **P3/4** | **Irreducible Governance Structure** (this paper) | [10.5281/zenodo.19708496](https://doi.org/10.5281/zenodo.19708496) | TBD |
+| **P3/4** | **Irreducible Governance Structure** (this paper) | [10.5281/zenodo.19708496](https://doi.org/10.5281/zenodo.19708496) | on appeal |
 | P5 | Reconstructive Authority Model (RAM) | [10.5281/zenodo.19669430](https://doi.org/10.5281/zenodo.19669430) | [2604.22898](https://arxiv.org/abs/2604.22898) |
-| P6 | Operationalizing Reconstructive Authority | [10.5281/zenodo.19699460](https://doi.org/10.5281/zenodo.19699460) | TBD |
-| P7 | Closing the Execution Gap (Empirical) | [10.5281/zenodo.19929771](https://doi.org/10.5281/zenodo.19929771) | TBD |
+| P6 | Operationalizing Reconstructive Authority | [10.5281/zenodo.19699460](https://doi.org/10.5281/zenodo.19699460) | [2605.23935](https://arxiv.org/abs/2605.23935) |
+| P7 | Closing the Execution Gap (Empirical) | [10.5281/zenodo.19929771](https://doi.org/10.5281/zenodo.19929771) | on appeal |
+| P8 | Identity-Bound Governance (APB) | [10.5281/zenodo.20157139](https://doi.org/10.5281/zenodo.20157139) | on appeal |
+| P9 | MCP-Native Governance | [10.5281/zenodo.20162878](https://doi.org/10.5281/zenodo.20162878) | pending |
+| P10 | Non-Blocking Governance | [10.5281/zenodo.20214654](https://doi.org/10.5281/zenodo.20214654) | pending |
 
 ---
 
